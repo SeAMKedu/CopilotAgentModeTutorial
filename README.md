@@ -36,3 +36,9 @@ Jos olet opiskelija tai opettaja, älä avaa ilmaista kokeilujaksoa. Opiskelijat
 
 Asenna seuraavaksi GitHub Copilot -laajennus Visual Studio Codeen: [GitHub Copilot extension](https://docs.github.com/en/copilot/managing-copilot/configure-personal-settings/installing-the-github-copilot-extension-in-your-environment).
 
+## Esimerkkisovellus C#-ohjelmointikielellä
+
+Tutustutaan Copilotin käyttöön tekemällä pieni esimerkkisovellus Copilotin avulla. Esimerkkisovellus lukee tiedostosta dataa tuontiautojen autoveropäätöksistä ja laskee niistä erilaisia tunnuslukuja.
+
+Harjoituksessa perehdytään ensin automaattiseen koodintäydennykseen sekä kehotteiden antamiseen Inline Chatin ja kommenttien avulla. Tämän jälkeen kokeillaan Copilotia koodin selittämiseen. Lopuksi tutustutaan Copilot Agent Modeen, jonka avulla voi tehdä useampaan tiedostoon kohdistuvia muutoksia.
+
