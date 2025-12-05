@@ -38,7 +38,7 @@ Asenna seuraavaksi GitHub Copilot -laajennus Visual Studio Codeen: [GitHub Copil
 
 ## Esimerkkisovellus C#-ohjelmointikielellä
 
-Tutustutaan Copilotin käyttöön tekemällä pieni esimerkkisovellus Copilotin avulla. Esimerkkisovellus lukee tiedostosta dataa tuontiautojen autoveropäätöksistä ja laskee niistä erilaisia tunnuslukuja.
+Tutustutaan Copilotin käyttöön tekemällä pieni esimerkkisovellus Copilotin avulla. Esimerkkisovellus käsittelee Suomen kuntien tietoja.
 
 Harjoituksessa perehdytään ensin automaattiseen koodintäydennykseen sekä kehotteiden antamiseen Inline Chatin ja kommenttien avulla. Tämän jälkeen kokeillaan Copilotia koodin selittämiseen. Lopuksi tutustutaan Copilot Agent Modeen, jonka avulla voi tehdä useampaan tiedostoon kohdistuvia muutoksia.
 
@@ -52,29 +52,40 @@ Asenna seuraavat ohjelmistot, ellei sinulla ole jo niitä:
 
 ### Projektin perustaminen
 
-Tämä harjoitus tehdään Visual Studio Code -editorilla. Toinen vaihtoehto olisi käyttää Visual Studio -kehitysympäristöä.
+Tämä harjoitus tehdään pääosin Visual Studio Code -editorilla. Projekti kannattaa kuitenkin luoda täydellä Visual Studio -versiolla, että projektiin syntyy debuggausta varten tarvittavat tiedostot. Copilotin käyttö käytto on kuitenkin sujuvampaa VS Codessa.
 
-Luo projekti C#-konsolisovellusta varten:
-```
-dotnet new console -n ReadCarTaxData
-```
-Komento tekee hakemiston ReadCarTaxData ja sen alle projektitiedoston ReadCarTaxData.csproj ja ohjelmakooditiedoston Program.cs. 
+![Visual Studio](images/visualstudio.png)
 
-Siirry seuraavaksi syntyneeseen projektihakemistoon.
-```
-cd MyConsoleApp
-```
+Avaa Visual Studio
+- Create a new project
+- Valitse Console App (Ei .NET Framework)
+- Valitse Do not use top-level statements
+- Paina Create
+- Testaa ohjelma ajamalla se (Debug - Start Without Debugging)
 
-Voit myös kääntää ohjelman tässä vaiheessa. Tämä ei ole välttämätöntä, sillä ohjelma käännetään ajettaessa, jos siihen on tehty muutoksia edellisen käännöksen jälkeen.
-```
-dotnet build
-```
+Sulje Visual Studio nyt. Navigoi komentorivillä siihen hakemistoon, mihin projekti syntyi.
+
+> [!NOTE]
+> Jos et halua kuitenkaan käyttää täyttä Visual Studiota, voit tehdä projektin C#-konsolisovellusta varten terminaalista. Tämä on siis vaihtoehtoinen tapa luoda projekti:
+> ```
+> dotnet new console -n ReadMunicipalityData
+> ```
+> Komento tekee hakemiston ReadMunicipalityData ja sen alle projektitiedoston ReadMunicipalityData.csproj ja ohjelmakooditiedoston Program.cs.
+
+> Siirry seuraavaksi syntyneeseen projektihakemistoon.
+> ```
+> cd ReadMunicipalityData
+> ```
+
+> Voit myös kääntää ohjelman tässä vaiheessa. Tämä ei ole > välttämätöntä, sillä ohjelma käännetään ajettaessa, jos siihen on tehty muutoksia edellisen käännöksen jälkeen.
+> ```
+> dotnet build
+> ```
 
 Aja seuraavaksi ohjelma komentoriviltä.
 ```
 dotnet run
 ```
-
 Käynnistä VS Code näin. VS Code avautuu samaan hakemistoon, mistä käynnistys tehtiin.
 ```
 code .
@@ -82,21 +93,22 @@ code .
 
 ### Inline Chat
 
-Tehdään seuraavaksi ohjelma, joka lukee tiedoston autoverot.csv. Tiedoston sarakkeet ovat merkki, vetotapa, teho, verotusarvo ja veron määrä. Tiedot on erotettu välilyönnillä.
+Tehdään seuraavaksi ohjelma, joka lukee tiedoston [kunnat2024.csv](kunnat2024.csv). Tiedoston sarakkeet ovat ID, nimi ja asukasluku. Tiedot on erotettu pilkulla.
+
+Alkuperäinen data löytyy [kuntaliiton sivulta](https://www.kuntaliitto.fi/kuntaliitto/tietotuotteet-ja-palvelut/kaupunkien-ja-kuntien-lukumaarat-ja-vaestotiedot).
 
 ```
-ADRIA	Etuveto	110	106720	0
-BURSTNER	Takaveto	96	76730	0
-BURSTNER	Etuveto	109	80167	0
-MAXUS	Etuveto	150	25641	692
-RAPIDO	Etuveto	95	62108	0
-RENAULT	Takaveto	110	293	52
-ADRIA	Etuveto	96	98775	0
+20;Akaa;16387
+5;Alajärvi;9078
+9;Alavieska;2410
+10;Alavus;10780
+16;Asikkala;7889
+18;Askola;4651
 ```
-
-Ohjelma tekee kustakin rivistä Car-luokan olion. Car-luokan oliot tallennetaan listaan.
 
 Pyydetään Copilotia tekemään ensin pelkkä tiedoston lukeminen. Annetaan kehote Inline Chatistä. Inline Chatin saa päälle painamalla Ctrl+I, kuten VS Code ehdottaa.
+
+Annetaan Inline Chatille prmpti: Make a program which reads file kunnat2024.csv, The program makes an object of class Municipality of each row in the file. The objects are stored in a a list.
 
 KUVA
 
