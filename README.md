@@ -110,7 +110,10 @@ Kopioi tiedosto [kunnat2024.csv](kunnat2024.csv) C#-projektin juureen samalle ta
 
 Avaa VS Codessa tiedosto Program.cs. Poista rivi, jossa tulostetaan Hello World. Avaa tähän kohtaan Inline Chat (Ctrl+I).
 
-Anna sitten Inline Chatille prompti: Make a program, which read the file kunnat2024.csv.
+Anna sitten Inline Chatille prompti:
+```
+Make a program, which read the file kunnat2024.csv.
+```
 
 KUVA
 
@@ -136,4 +139,51 @@ Tässä on lyhyt yhteenveto toimintatavoista:
 - Ask: Perinteinen Chat-ikkuna, jossa voi kysyä selitystä ohjelmakoodiin. Tekee myös koodiehdotuksia, mutta näitä ei tehdä suoraan kopoditiedostoihin.
 - Edit: Tekee muutoksia tiedostoihin suoraan, kuten Agent.
 
-Osa toimintatavoista on päällekkäisiä ja voi olla vaikea erottaa, miten ne eroavat toisistaan. Tärkeimmät toimintatavat ovat kuitenkin Agent ja Ask. Toiminatapojen erot selviävät parhaiten kokeilemalla.
+Osa toimintatavoista on päällekkäisiä ja voi olla vaikea erottaa, miten ne eroavat toisistaan. Tärkeimmät toimintatavat ovat kuitenkin Agent ja Ask. Toimintatapojen erot selviävät parhaiten kokeilemalla.
+
+### Ask
+
+Täydennetään ohjelmaa siten, että kustakin kunnasta luodaan Municipality-luokan olio. Oliot tallennetaan listaan. Pyydetään Copilotia tekemään myös Municipality-luokka.
+
+Valitse alareunasta Ask-mode. Anna sitten Chat-ikkunassa prompti:
+```
+Create class Municipality. Fields (properties) are ID, Name and Population. Read the file and create a list of municipalities. 
+```
+Copilot antaa koodiehdotuksen Chat-ikkunaan.
+
+![Ask-mode](images/askmode.png)
+
+Voit tarkastella koodiehdotusta Chat-ikkunassa. Jos se on mielestäsi OK, voit kopioida sen Program.cs-kooditiedostoon kokonaan tai osittain.
+
+Ei tehdä käsin kopiointia kuitenkaan nyt, vaan kokeillaan Plan-modea. Jätetään ohjelmakoodi siis ennalleen.
+
+### Plan
+
+Valitse Chat-ikkunan alareunasta nyt Plan-mode ja kopioi Chat-ikkunaan taas edellisessä kohdassa annettu prompti:
+```
+Create class Municipality. Fields (properties) are ID, Name and Population. Read the file and create a list of municipalities. 
+```
+Copilotin Plan-mode antaa nyt yksityiskohtaisen suunnitelman siitä, miten ohjelma pitää toteuttaa.
+
+![Plan-mode](images/plan.png)
+
+Näyttää siltä, että sinun ei tarvitse osata promptata kovin tarkasti, vaan Copilot tekee yksityiskohtaiset promptit! Tämä tehtävä on kuitenkin hyvin yleinen ohjelmointitehtävä, eikä anna oikeaa kuvaa todellisen ohjelmointiongelman ratkaisusta. 
+
+Plan-mode tuntuu kuitenkin hyödylliseltä. Voit halutessasi muuttaa tai tarkentaa Copilotin tekemää suunnitelmaa.
+
+Annetaan seuraava prompti:
+```
+Skip invalid lines.
+Start implementation
+```
+Copilot tekee nyt muutoksen suoraan ohjelmakooditiedostoon Program.cs. 
+
+![Plan](images/plandone.png)
+
+Hyväksi muutokset painamalla Keep.
+
+Aja sitten ohjelma antamalla terminaalissa komento dotnet run.
+
+Halutessasi voit pyytää Copilotia selittämään koodia. Maalaa epäselvät koodirivit Program.cs:ssä ja kysy Chat-ikkunassa, esimerkiksi "mitä tämä tarkoittaa". On oikeastaan sama, mikä moodi sinulla on käytössä.
+
+![Koodin selitys](images/codeexplain.png)
