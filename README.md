@@ -106,12 +106,34 @@ Alkuperäinen data löytyy [kuntaliiton sivulta](https://www.kuntaliitto.fi/kunt
 18;Askola;4651
 ```
 
-Pyydetään Copilotia tekemään ensin pelkkä tiedoston lukeminen. Annetaan kehote Inline Chatistä. Inline Chatin saa päälle painamalla Ctrl+I, kuten VS Code ehdottaa.
+Kopioi tiedosto [kunnat2024.csv](kunnat2024.csv) C#-projektin juureen samalle tasolle kuin Program.cs.
 
-Annetaan Inline Chatille prmpti: Make a program which reads file kunnat2024.csv, The program makes an object of class Municipality of each row in the file. The objects are stored in a a list.
+Avaa VS Codessa tiedosto Program.cs. Poista rivi, jossa tulostetaan Hello World. Avaa tähän kohtaan Inline Chat (Ctrl+I).
+
+Anna sitten Inline Chatille prompti: Make a program, which read the file kunnat2024.csv.
 
 KUVA
 
 Inline Chat aukeaa koodieditoriin tiedostokohtaisesti. Tekoälyn avulla käytävä keskustelu kohdistuu siis avoinna olevaan tiedostoon.
 
 Inline Chatin lisäksi keskustelua voi käydä myös Chat-ikkunassa, joka avautuu ruudun oikealle puolelle omaan ikkunaansa. Chat-ikkunan käytöstä kerrotaan tässä oppaassa myöhemmin.
+
+### Chat-ikkuna
+
+Kokeillaan seuraavaksi Chat-ikkunan käyttöä. Chat-ikkunan saa auki yläpalkissa olevasta valikosta.
+
+![Chat-ikkunan avaus](images/openchat.png)
+
+Avaa Chat-ikkuna (Open Chat). Chat-ikkunan alareunassa on laatikko (Describe what to build next), johon voit antaa prompteja.
+
+![Chat-ikkuna](images/chatwindow.png)
+
+Alhaalta vasemmalta voit valita Copilotin toimintatavan. Oletusarvoisesti on valittuna Agent mode. Muut vaihtoehdot ovat Plan, Ask ja Edit.
+
+Tässä on lyhyt yhteenveto toimintatavoista:
+- Agent: Auttaa suorittamaan tehtäviä, hakee tietoa ja tekee kooditiedostoihin muutoksia puolestasi. Agent voi ajaa myös komentoja terminaalissa.
+- Plan: Laaditaan etenemissuunnitelma, joka jakaa tehtävän vaiheisiin ennen toteutusta.
+- Ask: Perinteinen Chat-ikkuna, jossa voi kysyä selitystä ohjelmakoodiin. Tekee myös koodiehdotuksia, mutta näitä ei tehdä suoraan kopoditiedostoihin.
+- Edit: Tekee muutoksia tiedostoihin suoraan, kuten Agent.
+
+Osa toimintatavoista on päällekkäisiä ja voi olla vaikea erottaa, miten ne eroavat toisistaan. Tärkeimmät toimintatavat ovat kuitenkin Agent ja Ask. Toiminatapojen erot selviävät parhaiten kokeilemalla.
