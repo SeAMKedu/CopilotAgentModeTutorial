@@ -20,7 +20,7 @@ Copilotia markkinoidaan tekoälypohjaisena pariohjelmoijana, jolta voi kysyä oh
 
 ## GitHub Copilot Agent Mode
 
-GitHub julkaisu marraskuussa 2024 Edits-toiminnon GitHub Copilotiin. Edits-toiminto muistuttaa Chat-ikkunaa, mutta Copilot Edits osaa tehdä ehdottamansa muutokset suoraan ohjelmakooditiedostoihin. Copilot Edits -toiminnosta on kerrottu täällä [text](https://github.com/SeAMKedu/CopilotTutorial).
+GitHub julkaisu marraskuussa 2024 Edits-toiminnon GitHub Copilotiin. Edits-toiminto muistuttaa Chat-ikkunaa, mutta Copilot Edits osaa tehdä ehdottamansa muutokset suoraan ohjelmakooditiedostoihin. Copilot Edits -toiminnosta on kerrottu [täällä](https://github.com/SeAMKedu/CopilotTutorial).
 
 Alkuvuodesta 2025 esitelty Agent mode laajentaa Edits Modea. Edits Mode keskittyy yksittäisiin koodimuutoksiin, kun taas Agent Moden avulla voidaan tehdä suurempia muutoksia ohjelmakooditiedostoihin vaiheittain. 
 
@@ -180,10 +180,23 @@ Copilot tekee nyt muutoksen suoraan ohjelmakooditiedostoon Program.cs.
 
 ![Plan](images/plandone.png)
 
-Hyväksi muutokset painamalla Keep.
+Hyväksi muutokset painamalla Keep lähdekoodi-ikkunassa.
 
-Aja sitten ohjelma antamalla terminaalissa komento dotnet run.
+Aja sitten ohjelma antamalla terminSaalissa komento dotnet run.
 
-Halutessasi voit pyytää Copilotia selittämään koodia. Maalaa epäselvät koodirivit Program.cs:ssä ja kysy Chat-ikkunassa, esimerkiksi "mitä tämä tarkoittaa". On oikeastaan sama, mikä moodi sinulla on käytössä.
+Halutessasi voit pyytää Copilotia selittämään koodia. Maalaa epäselvät koodirivit Program.cs:ssä ja kysy Chat-ikkunassa, esimerkiksi "mitä tämä tarkoittaa".
 
 ![Koodin selitys](images/codeexplain.png)
+
+### Agent
+
+Agent moden avulla voidaan tehdä suurempia muutoksia ohjelmakooditiedostoihin vaiheittain. Agent-mode lukee ja muokkaa projektin tiedostoja, ajaa komentoja terminaalissa ja toimii vuorovaikutteisesti ohjelmoijan kanssa. Ohjelmoija antaa tavoitteen, agentti laatii suunnitelman ja etenee pienin askelin antaen säännöllisiä tilapäivityksiä. Ennen muutoksia tai komentojen ajoa agentti pyytää käyttäjältä vahvistuksen ja mukauttaa suunnitelmaa iteratiivisesti käyttäjän palautteen perusteella.
+
+Kokeillaan seuraavaksi Agent-modea käytännössä. Täydennetään ohjelmaa siten, että se hakee kuntien sijaintitiedot ja maakunnan Nominatim-palvelusta.
+
+Aseta Agent-mode chat-ikkunan alareunasta ja anna seuraava prompti:
+```
+Find the location and region (maakunta) of each municipality by using Nominatum service. Make a new CSV file, which contain region, latitude and longitude in addition to the original fields.
+```
+
+![Virheen korjaus](images/bugcorrection.png)
