@@ -124,13 +124,13 @@ Inline Chatiä ei pidä sekoittaa Chat-ikkunaan, josta kerrotaan seuraavassa koh
 
 Inline Chatin lisäksi keskustelua tekoälyn kanssa voi käydä myös Chat-ikkunassa, joka avautuu ruudun oikealle puolelle omaan ikkunaansa. 
 
-Chat-ikkunan saa auki yläpalkissa olevasta valikosta.
+Chat-ikkunan saa auki yläpalkissa olevasta valikosta:
 
-<img src="images/openchat.png" width="60%" alt="Chat-ikkunan avaus">
+<img src="images/openchat.png" width="40%" alt="Chat-ikkunan avaus">
 
 Avaa Chat-ikkuna (Open Chat). Chat-ikkunan alareunassa on laatikko (Describe what to build next), johon voit antaa prompteja.
 
-<img src="images/chatwindow.png" width="60%" alt="Chat-ikkuna">
+<img src="images/chatwindow.png" width="40%" alt="Chat-ikkuna">
 
 Alhaalta vasemmalta voit valita Copilotin toimintatavan. Oletusarvoisesti on valittuna Agent mode. Muut vaihtoehdot ovat Plan, Ask ja Edit.
 
