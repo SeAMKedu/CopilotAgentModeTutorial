@@ -10,7 +10,7 @@ Oppaassa kerrotaan seuraavista Copilotin käyttöön liittyvistä asioista:
 - Miten automaattinen koodintäydennys toimii
 - Kehotteiden antaminen kommenttien ja Inline Chatin kautta
 - Chat-ikkunan käyttö koodin selittämiseen
-- Agent Moden käyttö projektien perustamisessa ja koodin refaktoroinnissa
+- Agent- ja Plan-moden käyttö koodin muokkaamisessa ja generoimisessa.
 
 ## GitHub Copilot
 
@@ -18,11 +18,11 @@ GitHub Copilot on tekoälyyn pohjautuva ohjelmointityökalu, joka osaa luoda ja 
 
 Copilotia markkinoidaan tekoälypohjaisena pariohjelmoijana, jolta voi kysyä ohjeita ohjelmointityön aikana. Copilotia voi pyytää myös selittämään annettua ohjelmakoodia tai virheilmoituksia. Virhetilanteissa Copilot selittää ongelman ja antaa korjausehdotuksen. Copilot on myös hyödyllinen yksikkötestien laatimisessa. Copilot toimii parhaiten, kun sille on annettu tietoa kehitettävän ohjelman kontekstista. Käytännössä tämä tarkoittaa sitä, että Copilotille kerrotaan, mitä ohjelmakoodia sen tulee huomioida koodiehdotuksia varten. 
 
-## GitHub Copilot Agent Mode
+## GitHub Copilot Agent-mode
 
 GitHub julkaisu marraskuussa 2024 Edits-toiminnon GitHub Copilotiin. Edits-toiminto muistuttaa Chat-ikkunaa, mutta Copilot Edits osaa tehdä ehdottamansa muutokset suoraan ohjelmakooditiedostoihin. Copilot Edits -toiminnosta on kerrottu [täällä](https://github.com/SeAMKedu/CopilotTutorial).
 
-Alkuvuodesta 2025 esitelty Agent mode laajentaa Edits Modea. Edits Mode keskittyy yksittäisiin koodimuutoksiin, kun taas Agent Moden avulla voidaan tehdä suurempia muutoksia ohjelmakooditiedostoihin vaiheittain. 
+Alkuvuodesta 2025 esitelty Agent-mode laajentaa Edits-modea (nykyään Edit). Edit-mode keskittyy yksittäisiin koodimuutoksiin, kun taas Agent Moden avulla voidaan tehdä suurempia muutoksia ohjelmakooditiedostoihin vaiheittain. 
 
 Agent Mode tuo "agenttimaisen" toiminnallisuuden VS Codeen. Koodiehdotusten lisäksi se osaa tekemään laajempia koodaustehtäviä vaiheittain. Agentti pystyy lukemaan tiedostoja ja muokkaamaan projektin tiedostoja sekä ajamaan komentoja terminaalissa. Agentti toimii vuorovaikutteisesti ohjelmoijan kanssa. Työn kulku menee siten, että ohjelmoija antaa Colpilotille tavoitteen ja agentti laatii suunnitelman ja vie prosessia eteenpäin. Agentti etenee pienin askelin ja antaa statuspäivityksen muutaman toimenpiteen välein. Agentti pyytää käyttäjää vahvistamaan muutosehdotukset ja komentojen ajon terminaalissa. 
 
@@ -57,7 +57,7 @@ Tämä harjoitus tehdään pääosin Visual Studio Code -editorilla. Projekti ka
 ![Visual Studio](images/visualstudio.png)
 
 Avaa Visual Studio
-- Create a new project
+- Valitse Create a new project
 - Valitse Console App (Ei .NET Framework)
 - Valitse Do not use top-level statements
 - Paina Create
@@ -70,13 +70,11 @@ Sulje Visual Studio nyt. Navigoi komentorivillä siihen hakemistoon, mihin proje
 > ```
 > dotnet new console -n ReadMunicipalityData
 > ```
-> Komento tekee hakemiston ReadMunicipalityData ja sen alle projektitiedoston ReadMunicipalityData.csproj ja ohjelmakooditiedoston Program.cs.
-
+> Komento tekee hakemiston ReadMunicipalityData ja sen alle projektitiedoston ReadMunicipalityData.csproj ja ohjelmakooditiedoston Program.cs. Ohjelmaa voi nyt kehittää VS Codella.
 > Siirry seuraavaksi syntyneeseen projektihakemistoon.
 > ```
 > cd ReadMunicipalityData
 > ```
-
 > Voit myös kääntää ohjelman tässä vaiheessa. Tämä ei ole > välttämätöntä, sillä ohjelma käännetään ajettaessa, jos siihen on tehty muutoksia edellisen käännöksen jälkeen.
 > ```
 > dotnet build
