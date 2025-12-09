@@ -196,16 +196,27 @@ Halutessasi voit pyytää Copilotia selittämään koodia. Maalaa epäselvät ko
 
 ![Koodin selitys](images/codeexplain.png)
 
+### Promptaus ohjelmakoodin kommentin kautta
+
+Kokeile vielä promptausta ohjelmakoodin kommentin avulla. Kirjoita seuraava kommentti ensimmäisen foreach-lauseen jälkeen:
+```Csharp
+// Sort municipalities by population in descending order
+```
+Copilot ehdottaa sinulle uutta koodiriviä. Hyväksy se painamalla Tab.
+
+![Promptaus kommentilla](images/comment.png)
+
 ### Agent
 
 Agent moden avulla voidaan tehdä suurempia muutoksia ohjelmakooditiedostoihin vaiheittain. Agent-mode lukee ja muokkaa projektin tiedostoja, ajaa komentoja terminaalissa ja toimii vuorovaikutteisesti ohjelmoijan kanssa. Ohjelmoija antaa tavoitteen, agentti laatii suunnitelman ja etenee pienin askelin antaen säännöllisiä tilapäivityksiä. Ennen muutoksia tai komentojen ajoa agentti pyytää käyttäjältä vahvistuksen ja mukauttaa suunnitelmaa iteratiivisesti käyttäjän palautteen perusteella. Agentti voi myös pyytää lupaa ohjelmaan ajamiseen, että se voi selvittää ajonaikaisen virheilmoituksen syyn.
 
-Kokeillaan seuraavaksi Agent-modea käytännössä. Täydennetään ohjelmaa siten, että se hakee kuntien sijaintitiedot ja maakunnan Nominatim-palvelusta.
+Kokeillaan seuraavaksi Agent-modea käytännössä. Täydennetään ohjelmaa siten, että se hakee kuntien sijaintitiedot ja maakunnan Nominatim-palvelusta. Pyydetään Copilotia vielä siirtämään Municipality-luokan omaan tiedostoonsa.
 
 Aseta Agent-mode chat-ikkunan alareunasta ja anna seuraava prompti:
 ```
 Find the location and region (maakunta) of each municipality by using Nominatum service.
 Make a new CSV file, which contain region, latitude and longitude in addition to the original fields.
+Move the class Municipality to its own file.
 ```
+<img src="images/bugcorrection.png" width="60%" alt="Virheen korjaus">
 
-![Virheen korjaus](images/bugcorrection.png)
