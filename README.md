@@ -137,6 +137,8 @@ Avaa Chat-ikkuna (Open Chat). Chat-ikkunan alareunassa on laatikko (Describe wha
 
 Alhaalta vasemmalta voit valita Copilotin toimintatavan. Oletusarvoisesti on valittuna Agent mode. Muut vaihtoehdot ovat Plan, Ask ja Edit.
 
+<img src="images/allmodes.png" width="40%" alt="Modet">
+
 Tässä on lyhyt yhteenveto toimintatavoista:
 - Agent: Auttaa suorittamaan tehtäviä, hakee tietoa ja tekee kooditiedostoihin muutoksia puolestasi. Agent voi ajaa myös komentoja terminaalissa.
 - Plan: Laaditaan etenemissuunnitelma, joka jakaa tehtävän vaiheisiin ennen toteutusta.
