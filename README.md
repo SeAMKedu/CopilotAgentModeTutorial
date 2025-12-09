@@ -112,9 +112,12 @@ Anna sitten Inline chatille prompti:
 ```
 Make a program, which reads the file kunnat2024.csv.
 ```
+
+Paina seuraavaksi Inline chat ikkunan oikeassa reunassa olevaa nuolta.
+
 ![Inline chat](images/inlinechat.png)
 
-Paina seuraavaksi Inline chat ikkunan oikeassa reunassa olevaa nuolta. Hyväksy generoitu koodi painamalla Accept. 
+Hyväksy generoitu koodi painamalla Accept. 
 
 Inline Chat aukeaa koodieditoriin tiedostokohtaisesti. Tekoälyn avulla käytävä keskustelu kohdistuu siis avoinna olevaan tiedostoon. Inline chatin sijaan voit antaa kehoitteen myös ohjelmakoodin kommentissa.
 
