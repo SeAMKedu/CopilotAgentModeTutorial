@@ -153,11 +153,12 @@ Täydennetään ohjelmaa siten, että kustakin kunnasta luodaan Municipality-luo
 
 Valitse alareunasta Ask-mode. Anna sitten Chat-ikkunassa prompti:
 ```
-Create class Municipality. Fields (properties) are ID, Name and Population. Read the file and create a list of municipalities. 
+Create class Municipality. Fields (properties) are ID, Name and Population.
+Read the file and create a list of municipalities. 
 ```
 Copilot antaa koodiehdotuksen Chat-ikkunaan.
 
-![Ask-mode](images/askmode.png)
+<img src="images/askmode.png" width="40%" alt="Ask-mode">
 
 Voit tarkastella koodiehdotusta Chat-ikkunassa. Jos se on mielestäsi OK, voit kopioida sen Program.cs-kooditiedostoon kokonaan tai osittain.
 
