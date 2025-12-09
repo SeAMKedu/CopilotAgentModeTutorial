@@ -168,7 +168,8 @@ Ei tehdä käsin kopiointia kuitenkaan nyt, vaan kokeillaan Plan-modea. Jätetä
 
 Valitse Chat-ikkunan alareunasta nyt Plan-mode ja kopioi Chat-ikkunaan taas edellisessä kohdassa annettu prompti:
 ```
-Create class Municipality. Fields (properties) are ID, Name and Population. Read the file and create a list of municipalities. 
+Create class Municipality. Fields (properties) are ID, Name and Population.
+Read the file and create a list of municipalities. 
 ```
 Copilotin Plan-mode antaa nyt yksityiskohtaisen suunnitelman siitä, miten ohjelma pitää toteuttaa.
 
@@ -178,14 +179,14 @@ Näyttää siltä, että sinun ei tarvitse osata promptata kovin tarkasti, vaan 
 
 Plan-mode tuntuu kuitenkin hyödylliseltä. Voit halutessasi muuttaa tai tarkentaa Copilotin tekemää suunnitelmaa.
 
-Annetaan seuraava prompti:
+Annetaan seuraavaksi prompti:
 ```
 Skip invalid lines.
 Start implementation
 ```
 Copilot tekee nyt muutoksen suoraan ohjelmakooditiedostoon Program.cs. 
 
-![Plan](images/plandone.png)
+<img src="images/plandone.png" width="60%" alt="Plan">
 
 Hyväksi muutokset painamalla Keep lähdekoodi-ikkunassa.
 
@@ -197,13 +198,14 @@ Halutessasi voit pyytää Copilotia selittämään koodia. Maalaa epäselvät ko
 
 ### Agent
 
-Agent moden avulla voidaan tehdä suurempia muutoksia ohjelmakooditiedostoihin vaiheittain. Agent-mode lukee ja muokkaa projektin tiedostoja, ajaa komentoja terminaalissa ja toimii vuorovaikutteisesti ohjelmoijan kanssa. Ohjelmoija antaa tavoitteen, agentti laatii suunnitelman ja etenee pienin askelin antaen säännöllisiä tilapäivityksiä. Ennen muutoksia tai komentojen ajoa agentti pyytää käyttäjältä vahvistuksen ja mukauttaa suunnitelmaa iteratiivisesti käyttäjän palautteen perusteella.
+Agent moden avulla voidaan tehdä suurempia muutoksia ohjelmakooditiedostoihin vaiheittain. Agent-mode lukee ja muokkaa projektin tiedostoja, ajaa komentoja terminaalissa ja toimii vuorovaikutteisesti ohjelmoijan kanssa. Ohjelmoija antaa tavoitteen, agentti laatii suunnitelman ja etenee pienin askelin antaen säännöllisiä tilapäivityksiä. Ennen muutoksia tai komentojen ajoa agentti pyytää käyttäjältä vahvistuksen ja mukauttaa suunnitelmaa iteratiivisesti käyttäjän palautteen perusteella. Agentti voi myös pyytää lupaa ohjelmaan ajamiseen, että se voi selvittää ajonaikaisen virheilmoituksen syyn.
 
 Kokeillaan seuraavaksi Agent-modea käytännössä. Täydennetään ohjelmaa siten, että se hakee kuntien sijaintitiedot ja maakunnan Nominatim-palvelusta.
 
 Aseta Agent-mode chat-ikkunan alareunasta ja anna seuraava prompti:
 ```
-Find the location and region (maakunta) of each municipality by using Nominatum service. Make a new CSV file, which contain region, latitude and longitude in addition to the original fields.
+Find the location and region (maakunta) of each municipality by using Nominatum service.
+Make a new CSV file, which contain region, latitude and longitude in addition to the original fields.
 ```
 
 ![Virheen korjaus](images/bugcorrection.png)
