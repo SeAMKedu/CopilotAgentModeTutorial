@@ -75,7 +75,7 @@ Sulje Visual Studio nyt. Navigoi komentorivillä siihen hakemistoon, mihin proje
 > ```
 > cd ReadMunicipalityData
 > ```
-> Voit myös kääntää ohjelman tässä vaiheessa. Tämä ei ole > välttämätöntä, sillä ohjelma käännetään ajettaessa, jos siihen on tehty muutoksia edellisen käännöksen jälkeen.
+> Voit myös kääntää ohjelman tässä vaiheessa. Tämä ei ole välttämätöntä, sillä ohjelma käännetään automaattisesti ajettaessa, jos siihen on tehty muutoksia edellisen käännöksen jälkeen.
 > ```
 > dotnet build
 > ```
@@ -89,7 +89,7 @@ Käynnistä VS Code näin. VS Code avautuu samaan hakemistoon, mistä käynnisty
 code .
 ```
 
-### Inline Chat
+### Inline chat
 
 Tehdään seuraavaksi ohjelma, joka lukee tiedoston [kunnat2024.csv](kunnat2024.csv). Tiedoston sarakkeet ovat ID, nimi ja asukasluku. Tiedot on erotettu pilkulla.
 
@@ -108,20 +108,23 @@ Kopioi tiedosto [kunnat2024.csv](kunnat2024.csv) C#-projektin juureen samalle ta
 
 Avaa VS Codessa tiedosto Program.cs. Poista rivi, jossa tulostetaan Hello World. Avaa tähän kohtaan Inline Chat (Ctrl+I).
 
-Anna sitten Inline Chatille prompti:
+Anna sitten Inline chatille prompti:
 ```
-Make a program, which read the file kunnat2024.csv.
+Make a program, which reads the file kunnat2024.csv.
 ```
+![Inline chat](images/inlinechat.png)
 
-KUVA
+Paina seuraavaksi Inline chat ikkunan oikeassa reunassa olevaa nuolta. Hyväksy generoitu koodi painamalla Accept. 
 
-Inline Chat aukeaa koodieditoriin tiedostokohtaisesti. Tekoälyn avulla käytävä keskustelu kohdistuu siis avoinna olevaan tiedostoon.
+Inline Chat aukeaa koodieditoriin tiedostokohtaisesti. Tekoälyn avulla käytävä keskustelu kohdistuu siis avoinna olevaan tiedostoon. Inline chatin sijaan voit antaa kehoitteen myös ohjelmakoodin kommentissa.
 
-Inline Chatin lisäksi keskustelua voi käydä myös Chat-ikkunassa, joka avautuu ruudun oikealle puolelle omaan ikkunaansa. Chat-ikkunan käytöstä kerrotaan tässä oppaassa myöhemmin.
+Inline Chatiä ei pidä sekoittaa Chat-ikkunaan, josta kerrotaan seuraavassa kohdassa.
 
 ### Chat-ikkuna
 
-Kokeillaan seuraavaksi Chat-ikkunan käyttöä. Chat-ikkunan saa auki yläpalkissa olevasta valikosta.
+Inline Chatin lisäksi keskustelua tekoälyn kanssa voi käydä myös Chat-ikkunassa, joka avautuu ruudun oikealle puolelle omaan ikkunaansa. 
+
+Chat-ikkunan saa auki yläpalkissa olevasta valikosta.
 
 ![Chat-ikkunan avaus](images/openchat.png)
 
