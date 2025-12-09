@@ -158,7 +158,7 @@ Read the file and create a list of municipalities.
 ```
 Copilot antaa koodiehdotuksen Chat-ikkunaan.
 
-<img src="images/askmode.png" width="40%" alt="Ask-mode">
+<img src="images/askmode.png" width="60%" alt="Ask-mode">
 
 Voit tarkastella koodiehdotusta Chat-ikkunassa. Jos se on mielestäsi OK, voit kopioida sen Program.cs-kooditiedostoon kokonaan tai osittain.
 
