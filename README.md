@@ -263,3 +263,5 @@ Ohjelma on nyt jaettu pääohjelmaan (Main) ja aliohjelmiin, joita kutsutaan pä
 Tehdään uusi sovellus, joka tutkii kuntien väkilukujen muutoksia vuosien 2020 ja 2024 välillä.
 
 ### Harjoitus 2
+
+### Harjoitus 3
