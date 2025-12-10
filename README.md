@@ -218,5 +218,40 @@ Find the location and region (maakunta) of each municipality by using Nominatum 
 Make a new CSV file, which contain region, latitude and longitude in addition to the original fields.
 Move the class Municipality to its own file.
 ```
+Copilot tekee nyt muutoksia ohjelmakooditiedostoihin useassa vaiheessa ja pyytää käyttäjää hyväksymään ne.
+
+Hyväksy kaikki muutokset ja kokeile sitten ohjelmaa terminaalissa komennolla dotnet run.
+
+Saattaa olla, että ohjelma ei toimi ajon aikana oikein, vaan antaa virheilmoituksen. Jos käy näin, voit syöttää virheilmoitukset Copilotille esimerkiksi näin:
+
 <img src="images/bugcorrection.png" width="60%" alt="Virheen korjaus">
 
+Tässä tapauksessa Copilot pyytää ajamaan vielä ohjelman uudestaan, että se voi tutkia ohjelman ajonaikaista toimintaa ja virheilmoituksia tarkemmin. Tämän jälkeen Copilot antaa korjausehdotuksen, jonka käyttäjä voi hyväksyä.
+
+## Refaktorointi
+
+Pääohjelma Program.cs:ssä on vielä aika pitkä. Pyydetään Copilotia muuttamaan se pienemmiksi moduuleiksi. Kokeillaan tätä Plan-modessa, että saadaan näkyviin Copilotin suunnitelma.
+
+```
+Main program is now very long.
+Divide the Main function to smaller functions.
+```
+
+Copilotin Plan-mode antoi seuraavan suunnitelman:
+
+> [!TIP]
+> **Plan: Modularize Main Program**
+> 
+> Refactor the logic in Program.cs into smaller, focused helper methods for readability and maintainability.
+> 
+> **Steps**
+> 1. Move CSV reading logic to a method: List<Municipality> ReadMunicipalities(string filePath)
+> 2. Move Nominatim enrichment logic to a method: Task EnrichMunicipalitiesAsync(List<Municipality> municipalities)
+> 3. Move CSV writing logic to a method: void WriteMunicipalitiesCsv(List<Municipality> municipalities, string outputPath)
+> 4. Update Main to orchestrate by calling these helpers in order.
+
+Suunnitelma vaikuttaa hyvältä.
+
+Paina nyt Start implementation -painiketta (tai kirjoita Start implementation). Copilot tekee nyt muutokset ohjelmakooditiedostoon.
+
+Ohjelma on nyt jaettu pääohjelmaan (Main) ja aliohjelmiin, joita kutsutaan pääohjelmasta. Valmis esimerkkkiohjelma löytyy hakemistosta [ReadMunicipalityData](ReadMunicipalityData).
