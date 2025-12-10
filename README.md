@@ -257,3 +257,9 @@ Paina nyt Start implementation -painiketta (tai kirjoita Start implementation). 
 Ohjelma on nyt jaettu pääohjelmaan (Main) ja aliohjelmiin, joita kutsutaan pääohjelmasta. Valmis esimerkkkiohjelma löytyy hakemistosta [ReadMunicipalityData](ReadMunicipalityData).
 
 ## Harjoituksia
+
+### Harjoitus 1
+
+Tehdään uusi sovellus, joka tutkii kuntien väkilukujen muutoksia vuosien 2020 ja 2024 välillä.
+
+### Harjoitus 2
