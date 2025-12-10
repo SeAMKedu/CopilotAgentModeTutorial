@@ -89,7 +89,7 @@ Käynnistä VS Code näin. VS Code avautuu samaan hakemistoon, mistä käynnisty
 code .
 ```
 
-### Inline chat
+## Inline chat
 
 Tehdään seuraavaksi ohjelma, joka lukee tiedoston [kunnat2024.csv](kunnat2024.csv). Tiedoston sarakkeet ovat ID, nimi ja asukasluku. Tiedot on erotettu pilkulla.
 
@@ -123,7 +123,7 @@ Inline Chat aukeaa koodieditoriin tiedostokohtaisesti. Tekoälyn avulla käytäv
 
 Inline Chatiä ei pidä sekoittaa Chat-ikkunaan, josta kerrotaan seuraavassa kohdassa.
 
-### Chat-ikkuna
+## Chat-ikkuna
 
 Inline Chatin lisäksi keskustelua tekoälyn kanssa voi käydä myös Chat-ikkunassa, joka avautuu ruudun oikealle puolelle omaan ikkunaansa. 
 
@@ -147,7 +147,7 @@ Tässä on lyhyt yhteenveto toimintatavoista:
 
 Osa toimintatavoista on päällekkäisiä ja voi olla vaikea erottaa, miten ne eroavat toisistaan. Tärkeimmät toimintatavat ovat kuitenkin Agent ja Ask. Toimintatapojen erot selviävät parhaiten kokeilemalla.
 
-### Ask
+## Ask
 
 Täydennetään ohjelmaa siten, että kustakin kunnasta luodaan Municipality-luokan olio. Oliot tallennetaan listaan. Pyydetään Copilotia tekemään myös Municipality-luokka.
 
@@ -164,7 +164,7 @@ Voit tarkastella koodiehdotusta Chat-ikkunassa. Jos se on mielestäsi OK, voit k
 
 Ei tehdä käsin kopiointia kuitenkaan nyt, vaan kokeillaan Plan-modea. Jätetään ohjelmakoodi siis ennalleen.
 
-### Plan
+## Plan
 
 Valitse Chat-ikkunan alareunasta nyt Plan-mode ja kopioi Chat-ikkunaan taas edellisessä kohdassa annettu prompti:
 ```
@@ -196,7 +196,7 @@ Halutessasi voit pyytää Copilotia selittämään koodia. Maalaa epäselvät ko
 
 ![Koodin selitys](images/codeexplain.png)
 
-### Promptaus ohjelmakoodin kommentin kautta
+## Promptaus ohjelmakoodin kommentin kautta
 
 Kokeile vielä promptausta ohjelmakoodin kommentin avulla. Kirjoita seuraava kommentti ensimmäisen foreach-lauseen jälkeen:
 ```Csharp
@@ -206,7 +206,7 @@ Copilot ehdottaa sinulle uutta koodiriviä. Hyväksy se painamalla Tab.
 
 ![Promptaus kommentilla](images/comment.png)
 
-### Agent
+## Agent
 
 Agent moden avulla voidaan tehdä suurempia muutoksia ohjelmakooditiedostoihin vaiheittain. Agent-mode lukee ja muokkaa projektin tiedostoja, ajaa komentoja terminaalissa ja toimii vuorovaikutteisesti ohjelmoijan kanssa. Ohjelmoija antaa tavoitteen, agentti laatii suunnitelman ja etenee pienin askelin antaen säännöllisiä tilapäivityksiä. Ennen muutoksia tai komentojen ajoa agentti pyytää käyttäjältä vahvistuksen ja mukauttaa suunnitelmaa iteratiivisesti käyttäjän palautteen perusteella. Agentti voi myös pyytää lupaa ohjelmaan ajamiseen, että se voi selvittää ajonaikaisen virheilmoituksen syyn.
 
@@ -255,3 +255,5 @@ Suunnitelma vaikuttaa hyvältä.
 Paina nyt Start implementation -painiketta (tai kirjoita Start implementation). Copilot tekee nyt muutokset ohjelmakooditiedostoon.
 
 Ohjelma on nyt jaettu pääohjelmaan (Main) ja aliohjelmiin, joita kutsutaan pääohjelmasta. Valmis esimerkkkiohjelma löytyy hakemistosta [ReadMunicipalityData](ReadMunicipalityData).
+
+## Harjoituksia
