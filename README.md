@@ -283,3 +283,7 @@ Tee Python-ohjelma Copilotin avulla, joka näyttää kuntien väkilukujen muutok
 Palaa C#-ohjelmaan. Muuta ohjelmaa siten, että laskee väkiluvun muutokset maakunnittain. Määrittele luokka maakuntaa varten, joka sisältää listan myös maakunnan kunnista.
 
 Kokeile sitten edellä tehtyä Python-ohjelmaa niin, että se näyttää maakuntien väkilukujen muutokset.
+
+### Lopuksi
+
+Tämä ohje on kirjoitettu Jatkuvan oppimisen ja työllisyyden palvelukeskuksen tuella.
