@@ -1,4 +1,4 @@
-# GitHub Copilotin peruskäyttö ja Agent Mode
+# GitHub Copilotin peruskäyttö ja Agent-mode
 
 Tämä opas on tarkoitettu aloittelevalle GitHub Copilotin käyttäjälle, jolla on jo kokemusta ohjelmoinnista. Esimerkeissä käytetään C#-ohjelmointikieltä, mutta kuvattuja menetelmiä voi soveltaa myös muilla ohjelmointikielillä.
 
@@ -20,11 +20,11 @@ Copilotia markkinoidaan tekoälypohjaisena pariohjelmoijana, jolta voi kysyä oh
 
 ## GitHub Copilot Agent-mode
 
-GitHub julkaisu marraskuussa 2024 Edits-toiminnon GitHub Copilotiin. Edits-toiminto muistuttaa Chat-ikkunaa, mutta Copilot Edits osaa tehdä ehdottamansa muutokset suoraan ohjelmakooditiedostoihin. Copilot Edits -toiminnosta on kerrottu [täällä](https://github.com/SeAMKedu/CopilotTutorial).
+GitHub julkaisi marraskuussa 2024 Edits-toiminnon GitHub Copilotiin (nykyään Edit). Edit-toiminto muistuttaa Chat-ikkunaa, mutta Edit osaa tehdä ehdottamansa muutokset suoraan ohjelmakooditiedostoihin. Edit-toiminnosta on kerrottu [täällä](https://github.com/SeAMKedu/CopilotTutorial).
 
-Alkuvuodesta 2025 esitelty Agent-mode laajentaa Edits-modea (nykyään Edit). Edit-mode keskittyy yksittäisiin koodimuutoksiin, kun taas Agent Moden avulla voidaan tehdä suurempia muutoksia ohjelmakooditiedostoihin vaiheittain. 
+Alkuvuodesta 2025 esitelty Agent-mode laajentaa Edit-modea. Edit-mode keskittyy yksittäisiin koodimuutoksiin, kun taas Agent-moden avulla voidaan tehdä suurempia muutoksia ohjelmakooditiedostoihin vaiheittain. 
 
-Agent Mode tuo "agenttimaisen" toiminnallisuuden VS Codeen. Koodiehdotusten lisäksi se osaa tekemään laajempia koodaustehtäviä vaiheittain. Agentti pystyy lukemaan tiedostoja ja muokkaamaan projektin tiedostoja sekä ajamaan komentoja terminaalissa. Agentti toimii vuorovaikutteisesti ohjelmoijan kanssa. Työn kulku menee siten, että ohjelmoija antaa Colpilotille tavoitteen ja agentti laatii suunnitelman ja vie prosessia eteenpäin. Agentti etenee pienin askelin ja antaa statuspäivityksen muutaman toimenpiteen välein. Agentti pyytää käyttäjää vahvistamaan muutosehdotukset ja komentojen ajon terminaalissa. 
+Agent-mode tuo "agenttimaisen" toiminnallisuuden VS Codeen. Koodiehdotusten lisäksi se osaa tekemään laajempia koodaustehtäviä vaiheittain. Agentti pystyy lukemaan tiedostoja ja muokkaamaan projektin tiedostoja sekä ajamaan komentoja terminaalissa. Agentti toimii vuorovaikutteisesti ohjelmoijan kanssa. Työn kulku menee siten, että ohjelmoija antaa Copilotille tavoitteen ja agentti laatii suunnitelman ja vie prosessia eteenpäin. Agentti etenee pienin askelin ja antaa statuspäivityksen muutaman toimenpiteen välein. Agentti pyytää käyttäjää vahvistamaan muutosehdotukset ja komentojen ajon terminaalissa. 
 
 ## GitHub Copilotin asentaminen VS Codeen
 
@@ -40,7 +40,7 @@ Asenna seuraavaksi GitHub Copilot -laajennus Visual Studio Codeen: [GitHub Copil
 
 Tutustutaan Copilotin käyttöön tekemällä pieni esimerkkisovellus Copilotin avulla. Esimerkkisovellus käsittelee Suomen kuntien tietoja.
 
-Harjoituksessa perehdytään ensin automaattiseen koodintäydennykseen sekä kehotteiden antamiseen Inline Chatin ja kommenttien avulla. Tämän jälkeen kokeillaan Copilotia koodin selittämiseen. Lopuksi tutustutaan Copilot Agent Modeen, jonka avulla voi tehdä useampaan tiedostoon kohdistuvia muutoksia.
+Harjoituksessa perehdytään ensin automaattiseen koodintäydennykseen sekä kehotteiden antamiseen Inline Chatin ja kommenttien avulla. Tämän jälkeen kokeillaan Copilotia koodin selittämiseen. Lopuksi tutustutaan Copilot Agent- ja Pilot-toimintoihin, joiden avulla voi tehdä useampaan tiedostoon kohdistuvia muutoksia.
 
 ### Tarvittavat ohjelmistot
 
@@ -52,7 +52,7 @@ Asenna seuraavat ohjelmistot, ellei sinulla ole jo niitä:
 
 ### Projektin perustaminen
 
-Tämä harjoitus tehdään pääosin Visual Studio Code -editorilla. Projekti kannattaa kuitenkin luoda täydellä Visual Studio -versiolla, että projektiin syntyy debuggausta varten tarvittavat tiedostot. Copilotin käyttö käytto on kuitenkin sujuvampaa VS Codessa.
+Tämä harjoitus tehdään pääosin Visual Studio Code -editorilla. Projekti kannattaa kuitenkin luoda täydellä Visual Studio -versiolla, että projektiin syntyy debuggausta varten tarvittavat tiedostot. Copilotin käyttö käytto on kuitenkin sujuvampaa VS Codessa kuin täydessä Visual Studiossa.
 
 ![Visual Studio](images/visualstudio.png)
 
@@ -91,7 +91,7 @@ code .
 
 ## Inline chat
 
-Tehdään seuraavaksi ohjelma, joka lukee tiedoston [kunnat2024.csv](kunnat2024.csv). Tiedoston sarakkeet ovat ID, nimi ja asukasluku. Tiedot on erotettu pilkulla.
+Tehdään seuraavaksi ohjelma, joka lukee tiedoston [kunnat2024.csv](kunnat2024.csv). Tiedoston sarakkeet ovat ID, nimi ja asukasluku. Tiedot on erotettu puolipisteellä.
 
 Alkuperäinen data löytyy [kuntaliiton sivulta](https://www.kuntaliitto.fi/kuntaliitto/tietotuotteet-ja-palvelut/kaupunkien-ja-kuntien-lukumaarat-ja-vaestotiedot).
 
@@ -141,7 +141,7 @@ Alhaalta vasemmalta voit valita Copilotin toimintatavan. Oletusarvoisesti on val
 
 Tässä on lyhyt yhteenveto toimintatavoista:
 - Agent: Auttaa suorittamaan tehtäviä, hakee tietoa ja tekee kooditiedostoihin muutoksia puolestasi. Agent voi ajaa myös komentoja terminaalissa.
-- Plan: Laaditaan etenemissuunnitelma, joka jakaa tehtävän vaiheisiin ennen toteutusta.
+- Plan: Laatii etenemissuunnitelman, joka jakaa tehtävän vaiheisiin ennen toteutusta.
 - Ask: Perinteinen Chat-ikkuna, jossa voi kysyä selitystä ohjelmakoodiin. Tekee myös koodiehdotuksia, mutta näitä ei tehdä suoraan kopoditiedostoihin.
 - Edit: Tekee muutoksia tiedostoihin suoraan, kuten Agent.
 
@@ -190,7 +190,7 @@ Copilot tekee nyt muutoksen suoraan ohjelmakooditiedostoon Program.cs.
 
 Hyväksi muutokset painamalla Keep lähdekoodi-ikkunassa.
 
-Aja sitten ohjelma antamalla terminSaalissa komento dotnet run.
+Aja sitten ohjelma terminaalissa antamalla komento ```dotnet run```.
 
 Halutessasi voit pyytää Copilotia selittämään koodia. Maalaa epäselvät koodirivit Program.cs:ssä ja kysy Chat-ikkunassa, esimerkiksi "mitä tämä tarkoittaa".
 
@@ -215,12 +215,12 @@ Kokeillaan seuraavaksi Agent-modea käytännössä. Täydennetään ohjelmaa sit
 Aseta Agent-mode chat-ikkunan alareunasta ja anna seuraava prompti:
 ```
 Find the location and region (maakunta) of each municipality by using Nominatum service.
-Make a new CSV file, which contain region, latitude and longitude in addition to the original fields.
+Make a new CSV file, which contains region, latitude and longitude in addition to the original fields.
 Move the class Municipality to its own file.
 ```
 Copilot tekee nyt muutoksia ohjelmakooditiedostoihin useassa vaiheessa ja pyytää käyttäjää hyväksymään ne.
 
-Hyväksy kaikki muutokset ja kokeile sitten ohjelmaa terminaalissa komennolla dotnet run.
+Hyväksy kaikki muutokset ja kokeile sitten ohjelmaa terminaalissa komennolla ```dotnet run```.
 
 Saattaa olla, että ohjelma ei toimi ajon aikana oikein, vaan antaa virheilmoituksen. Jos käy näin, voit syöttää virheilmoitukset Copilotille esimerkiksi näin:
 
@@ -276,7 +276,7 @@ Mikä tietorakenne sopisi vuoden 2020 dataan, että hakeminen on tehokasta?
 
 ### Harjoitus 2
 
-Tee Python-ohjelma Copilotin avulla, joka näyttää kuntien väkilukujen muutokset kartalla. Sininen pallo näyttää väkiluvun kasvun ja punainen pallo väkiluvun vähenemisen. Pallon koko kuvaa muutoksen suuruutta. Kokeile, kannattaako näyttää absoluuttinen muutos vai prosenttisosuus.
+Tee Python-ohjelma Copilotin avulla, joka näyttää kuntien väkilukujen muutokset kartalla. Sininen ympyrä näyttää väkiluvun kasvun ja punainen ympyrä väkiluvun vähenemisen. Ympyrä koko kuvaa muutoksen suuruutta. Kokeile, kannattaako näyttää absoluuttinen muutos vai prosenttisosuus.
 
 ### Harjoitus 3
 
