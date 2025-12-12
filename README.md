@@ -232,10 +232,16 @@ Tässä tapauksessa Copilot pyytää ajamaan vielä ohjelman uudestaan, että se
 
 Pääohjelma Program.cs:ssä on vielä aika pitkä. Pyydetään Copilotia muuttamaan se pienemmiksi moduuleiksi. Kokeillaan tätä Plan-modessa, että saadaan näkyviin Copilotin suunnitelma.
 
+Coplotille on hyvä kertoa kehitettävän ohjelmiston kontekstista. Käytännössä tämä tarkoittaa sitä, että Copilotille kerrotaan, mitä lähdekooditiedostoja Copilotin tulee ottaa huomioon muutoksia suunnittellessaan. Huomioitavat lähdekooditiedostot luetellaan Chat-ikkunassa ennen promptia. Tiedostot voi lisätä esimerkiksi raahamalla ne Explorer-ikkunasta.
+
+Lisää kontekstiin tiedostot Program.cs ja Municipality.cs ja anne seuraava prompti:
+
 ```
 Main program is now very long.
 Divide the Main function to smaller functions.
 ```
+
+![Konteksti](images/context.png)
 
 Copilotin Plan-mode antoi seuraavan suunnitelman:
 
@@ -260,8 +266,20 @@ Ohjelma on nyt jaettu pääohjelmaan (Main) ja aliohjelmiin, joita kutsutaan pä
 
 ### Harjoitus 1
 
-Tehdään uusi sovellus, joka tutkii kuntien väkilukujen muutoksia vuosien 2020 ja 2024 välillä.
+Tehdään uusi sovellus, joka tutkii kuntien väkilukujen muutoksia vuosien 2020 ja 2024 välillä. Vuoden 2020 väkiluku on tiedostossa [kunnat2020.csv](kunnat2020.csv).
+
+Tee kokonaan uusi C# Console Application projekti, joka lukee tiedostot [kunnat2024_enriched.csv](kunnat2024_enriched.csv) ja [kunnat2020.csv](kunnat2020.csv). Vuoden 2024 tiedostossa on siis sijaintitiedot mukana (niitä tarvitaan myöhemmin).
+
+Tee Copilotin kanssa ohjelma, joka laskee 2024 datassa olevien kuntien väliluvun muutoksen vuosien 2024 ja 2020 välillä. Väkilun muutos tallennetaan Municipality luokkaa. Huomaa, että kuntia eri määrä vuosina 2024 ja 2020. Tallenna kuntien tiedot väkiluvun muutoksineen JSON-tiedostoon.
+
+Mikä tietorakenne sopisi vuoden 2020 dataan, että hakeminen on tehokasta?
 
 ### Harjoitus 2
 
+Tee Python-ohjelma Copilotin avulla, joka näyttää kuntien väkilukujen muutokset kartalla. Sininen pallo näyttää väkiluvun kasvun ja punainen pallo väkiluvun vähenemisen. Pallon koko kuvaa muutoksen suuruutta. Kokeile, kannattaako näyttää absoluuttinen muutos vai prosenttisosuus.
+
 ### Harjoitus 3
+
+Palaa C#-ohjelmaan. Muuta ohjelmaa siten, että laskee väkiluvun muutokset maakunnittain. Määrittele luokka maakuntaa varten, joka sisältää listan myös maakunnan kunnista.
+
+Kokeile sitten edellä tehtyä Python-ohjelmaa niin, että se näyttää maakuntien väkilukujen muutokset.
