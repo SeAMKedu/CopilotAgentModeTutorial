@@ -1,5 +1,7 @@
 # GitHub Copilotin peruskäyttö ja Agent-mode
 
+[![DOI](https://zenodo.org/badge/1109197150.svg)](https://doi.org/10.5281/zenodo.17942834)
+
 Tämä opas on tarkoitettu aloittelevalle GitHub Copilotin käyttäjälle, jolla on jo kokemusta ohjelmoinnista. Esimerkeissä käytetään C#-ohjelmointikieltä, mutta kuvattuja menetelmiä voi soveltaa myös muilla ohjelmointikielillä.
 
 ## Sisältö
