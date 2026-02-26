@@ -289,4 +289,7 @@ Kokeile sitten edellä tehtyä Python-ohjelmaa niin, että se näyttää maakunt
 ### Lopuksi
 
 Tämä ohje on kirjoitettu Jatkuvan oppimisen ja työllisyyden palvelukeskuksen tuella.
+
+Lisenssi: CC BY-NC-SA 4.0
+
 <img src="images/Rahoittaja_Jotpa_fi.png" width="40%" alt="Chat-ikkuna">
